@@ -39,7 +39,7 @@
   --palette-black-rgba:  rgba(197, 197, 197, 1);
   --palette-blue-rgba:   rgba(79,  201, 255, 1);
   --palette-pink-rgba:   rgba(255, 128, 197, 1);
-  --palette-yellow-rgba: rgba(255, 240, 70,  1);
+  --palette-yellow-rgba: rgba(253, 243, 153, 1);
 }
 
 html, body, section {
@@ -299,7 +299,7 @@ ul {
 .modal-container {
   width: 500px;
   margin: 0px auto;
-  padding: 30px 0;
+  padding: 35px 0;
   background-color: var(--palette-pink);
   border-radius: 15px;
   transition: all .3s ease;
@@ -335,10 +335,77 @@ ul {
   z-index: 1;
   background-color: var(--palette-blue);
   flex: 1;
+  height: 80px;
+  margin-left: -25px;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--palette-white);
+  text-transform: uppercase;
+}
+
+.cartoon-name h2 {
+  font-family: CN;
+}
+
+.cartoon-name h3 {
+  font-family: Whitney;
+}
+
+.classification {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin: 10px 10px 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--palette-white);
+  background-color: var(--palette-blue);
+  border: 3px solid var(--palette-white);
+  font-size: 1.5rem;
 }
 
 .modal-body {
-  margin: 20px 0;
+  color: var(--palette-white);
+  font-family: Whitney;
+  font-size: 1.2rem;
+}
+
+.body-content {
+  margin: 20px 20px;
+}
+
+.divisor {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 100%;
+  background-color: var(--palette-yellow);
+}
+
+.modal-body h4 {
+  margin-bottom: 10px;
+}
+
+.action-buttons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  background-color: var(--palette-blue);
+  color: var(--palette-white);
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .modal-default-button {

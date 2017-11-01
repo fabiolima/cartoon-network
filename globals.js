@@ -52,7 +52,7 @@ SCHEDULE_HOURS = [
   {
     id: 10,
     label: "10h",
-    moment: moment("12:00", "HH:mm")
+    moment: moment("10:00", "HH:mm")
   },
   {
     id: 11,

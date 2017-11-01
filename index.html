@@ -34,6 +34,7 @@
             v-for="hour in scheduleHours"
             v-on:click="setSelected(hour)"
             v-bind:class="{'current-hour': (getCurrentHour() == hour.id), 'active': (getSelectedHour() == hour.id) }">
+
           {{hour.moment.hour() }}h
         </li>
       </ul>
@@ -67,31 +68,47 @@
       <div class="modal-mask">
         <div class="modal-wrapper">
           <div class="modal-container">
-
+            <div class="action-buttons">
+              <div class="close" @click="$emit('close')">X</div>
+            </div>
             <div class="modal-header">
               <slot name="header">
                 <figure class="modal-thumbnail">
                   <img v-bind:src="cartoon.thumbnail" />
                 </figure>
                 <div class="cartoon-name">
-                  {{cartoon.title}}
+                  <h2>{{cartoon.title}}</h2>
+                  <h3>{{cartoon.originalTitle}}</h3>
                 </div>
+                <div class="classification"> 10 </div>
               </slot>
             </div>
 
             <div class="modal-body">
               <slot name="body">
-                default body 
+                <div class="body-content">
+                  <h4>Segunda, 18</h4>
+                  Irmão do Jorel é irmão do Jorel, garoto mais popular
+                  da escola, do bairro, da cidade e provavelmente do
+                  universo por sua beleza exótica, talento descomunal
+                  e cabelos sedosos... Mas isso não...
+                </div>
               </slot>
-            </div>
-            <div class="modal-footer">
-              <slot name="footer">
-                default footer
-                <button class="modal-default-button" @click="$emit('close')">
-                  OK
-                </button>
+              <div class="divisor"></div>
+              <slot name="body">
+                <div class="body-content">
+                  Horário de Início/Fim: 17:30 - 17:45 <br />
+                  Ano de produção: 2014 <br />
+                  País de Origem: Brasil <br />
+                  Classificação do conteúdo: Obra não publicitária brasileira, constituinte de espaço qualificado e independente. <br />
+                  Classificação indicativa: 10 anos <br />
+                  <br />
+                  Genero: Animação/Comédia <br />
+                  Diretor: Juliano Enrico <br />
+                </div>
               </slot>
-            </div>
+              <div class="divisor"></div>
+            </div>            
           </div>
         </div>
       </div>
