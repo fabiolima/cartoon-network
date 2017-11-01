@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cartoon Network</title>
+  <link rel="stylesheet" type="text/css" href="index.css">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <section class="intro">
+    <div class="logo-wrapper">
+      <div>
+        <span class="c-logo">C</span>
+        <span class="n-logo">N</span>
+      </div>      
+      <div class="logo-title">
+        Cartoon Network <span class="trade">&trade;</span>
+      </div>
+    </div>
+    <div class="proposal">
+      Proposta de redesign da <br />
+      Página de programação do <br />
+      site da cartoon network <br />
+    </div>
+  </section>
+
+  <section id="app" class="schedule">
+    <div class="header">
+      {{getDayOfWeek('pt-br')}}
+    </div>
+    <div class="container">
+      <ul class="schedule-list">
+        <li class="hour"
+            v-for="hour in scheduleHours"
+            v-on:click="setSelected(hour)"
+            v-bind:class="{'current-hour': (getCurrentHour() == hour.id), 'active': (getSelectedHour() == hour.id) }">
+          {{hour.moment.hour() }}h
+        </li>
+      </ul>
+      <div class="schedule-details"
+           v-if="scheduledCartoons.length > 0"
+           v-bind:class="currentColor">
+      	<h2>{{scheduledCartoons[0].time.hour}}h</h2>
+        <ul class="details-list">
+          <li class="cartoon-item"
+              @click="showModal = true; selectedCartoon = cartoon;"
+              @mouseenter="onCartoonHover"
+              @mouseleave="onCartoonHover"
+              v-for="cartoon in scheduledCartoons">
+              <span class="time">
+                 {{ cartoon.time.hour }}:{{ cartoon.time.minutes}}
+              </span>
+              <figure class="thumbnail-wrapper">
+                <img class="thumbnail" v-bind:src="cartoon.cartoon.thumbnail" />
+              </figure>
+              <h3 class="cartoon-title">
+                {{ cartoon.cartoon.title }}
+              </h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <modal v-if="showModal" v-bind="selectedCartoon" @close="showModal = false"></modal>
+  </section>
+  <script type="text/x-template" id="modal-template">
+    <transition name="modal">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+
+            <div class="modal-header">
+              <slot name="header">
+                <figure class="modal-thumbnail">
+                  <img v-bind:src="cartoon.thumbnail" />
+                </figure>
+                <div class="cartoon-name">
+                  {{cartoon.title}}
+                </div>
+              </slot>
+            </div>
+
+            <div class="modal-body">
+              <slot name="body">
+                default body 
+              </slot>
+            </div>
+            <div class="modal-footer">
+              <slot name="footer">
+                default footer
+                <button class="modal-default-button" @click="$emit('close')">
+                  OK
+                </button>
+              </slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </script>
+  <script src="assets/libs/lodash.min.js"></script>
+  <script src="assets/libs/vue.js"></script>
+  <script src="assets/libs/moment-with-locales.js"></script>
+  <script src="globals.js"></script>
+  <script src="Cartoon.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

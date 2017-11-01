@@ -1,0 +1,366 @@
+/* Font declarations */
+@font-face {
+  font-family: 'CN';
+  src: url('assets/fonts/cn-bold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Whitney';
+  src: url('assets/fonts/whitney-medium.otf');
+}
+
+@font-face {
+  font-family: 'Cartoon-Slam';
+  src: url('assets/fonts/cartoon-slam.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Riffic';
+  src: url('assets/fonts/RifficFree-Bold.ttf') format('truetype');
+}
+
+/* Minimal normalize */
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Variables and Defaults */
+:root {
+  --palette-blue: #009ade;
+  --palette-pink: #ec0080;
+  --palette-yellow: rgb(255,234,0);
+  --palette-grey:   #4c4c4c;
+  --palette-black:  #000000;
+  --palette-white:  #ffffff;
+  --palette-black-rgba:  rgba(197, 197, 197, 1);
+  --palette-blue-rgba:   rgba(79,  201, 255, 1);
+  --palette-pink-rgba:   rgba(255, 128, 197, 1);
+  --palette-yellow-rgba: rgba(255, 240, 70,  1);
+}
+
+html, body, section {
+  max-height: 100%;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.pink {
+  background-color: var(--palette-pink);
+}
+
+.blue {
+  background-color: var(--palette-blue);
+}
+
+.yellow {
+  background-color: var(--palette-yellow);
+}
+
+.black {
+  background-color: var(--palette-black);
+}
+
+.cartoon-item.black-rgba {
+  background-color: var(--palette-black-rgba);
+}
+
+.cartoon-item.pink-rgba {
+  background-color: var(--palette-pink-rgba);
+}
+
+.cartoon-item.blue-rgba {
+  background-color: var(--palette-blue-rgba);
+}
+
+.cartoon-item.yellow-rgba {
+  background-color: var(--palette-yellow-rgba);
+}
+
+.active {
+  opacity: 1;
+}
+
+/* SECTION INTRO */
+
+.intro {
+  display: flex;
+}
+
+.logo-wrapper{
+  font-family: Cartoon-Slam;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-transform: uppercase;
+}
+
+.n-logo, .c-logo {
+  font-size: 14rem;
+  display: inline-block;
+  height: 190px;
+  line-height: 208px;
+}
+
+.c-logo {
+  background-color: var(--palette-black);
+  color: var(--palette-white);
+  display: inline-block;
+  line-height: 208px;
+  padding: 0 10px 0 5px;
+}
+
+.logo-title {
+  font-size: 1.9rem;
+}
+
+.trade {
+  font-size: 18px;
+  font-weight: bold;
+  float: right;
+  bottom: 0;
+  top: 14px;
+  margin: 0 2px;
+}
+
+.proposal {
+  background-color: var(--palette-black);
+  color: var(--palette-white);
+  font-family: Whitney;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width:70%;
+  padding: 60px;
+}
+
+/* SCHEDULE SECTION */
+
+.schedule {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.header {
+  font-family: CN;
+  font-size: 2rem;
+  color: var(--palette-white);
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: var(--palette-blue);
+  padding: 0 20px;
+  border-top: 5px solid var(--palette-yellow);
+}
+
+.container {
+  padding: 20px 50px;
+  display: flex;
+}
+
+.schedule-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+
+}
+
+.hour {
+  font-size: 2rem;
+  font-family: CN;
+  color: var(--palette-white);
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 200ms ease-out;
+  font-family: Riffic;
+}
+
+.hour.active {
+  opacity: 1;
+}
+
+.hour:hover {
+  opacity: 1;
+}
+
+.hour:nth-child(3n+1) {
+  background-color: var(--palette-blue);
+}
+
+.hour:nth-child(3n + 2) {
+  background-color: var(--palette-pink);
+}
+
+.hour:nth-child(3n) {
+  background-color: var(--palette-yellow);
+}
+
+/* SORRY FOR !IMPORTANT :( */
+.current-hour {
+  background-color: var(--palette-black) !important;
+  color: var(--palette-blue);
+  opacity: 1;
+}
+
+.schedule-details {
+  flex: 1;
+  margin: 0 0 0 40px;
+  transition: background 200ms ease-out;
+}
+
+.schedule-details h2 {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: CN;
+  color: var(--palette-white);
+}
+
+.cartoon-item {
+  cursor: pointer;
+  height: 100px;
+  display: flex;
+  margin: 10px;
+  padding: 5px 5px 5px 5px;
+  background-color: var(--palette-white);
+}
+
+.time {
+  width: 110px;
+  position: absolute;
+  top: 29px;
+  left: -38px;
+  font-family: CN;
+  transform: rotate(-90deg);
+  color: var(--palette-grey);
+  font-size: 2.1rem;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.thumbnail-wrapper {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail {
+  height: 80px;
+}
+
+.cartoon-title {
+  font-family: Whitney;
+  color: var(--palette-grey);
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 10px;
+  width: 150px;
+}
+
+/* MODAL */
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 500px;
+  margin: 0px auto;
+  padding: 30px 0;
+  background-color: var(--palette-pink);
+  border-radius: 15px;
+  transition: all .3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+  height: 120px;
+  background-color: var(--palette-yellow);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.modal-thumbnail {
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 3px;
+  border: 8px solid var(--palette-blue);
+}
+
+.modal-thumbnail img {
+  height: 100%;
+}
+
+.cartoon-name {
+  z-index: 1;
+  background-color: var(--palette-blue);
+  flex: 1;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
