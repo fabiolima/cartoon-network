@@ -128,13 +128,13 @@ CARTOON_SEEDS = [
     originalTitle: "Dragon Ball Z Kai",
     thumbnail: "https://img00.deviantart.net/cb55/i/2014/187/5/c/ssj_goku__dragonball_kai__alt_palette_by_rayzorblade189-d7pfn16.png",
     schedule: {
-      sunday:    [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      monday:    [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      tuesday:   [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      wednesday: [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      thursday:  [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      friday:    [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
-      saturday:  [moment("00:00", "HH:mm"), moment("15:00", "HH:mm"), moment("23:30", "HH:mm")]
+      sunday:    [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      monday:    [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      tuesday:   [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      wednesday: [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      thursday:  [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      friday:    [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")],
+      saturday:  [moment("00:00", "HH:mm"), moment("00:15", "HH:mm"), moment("00:30", "HH:mm"), moment("00:45", "HH:mm"),  moment("15:00", "HH:mm"), moment("23:30", "HH:mm")]
     }
   },
   {
@@ -142,13 +142,13 @@ CARTOON_SEEDS = [
     originalTitle: "Steven Universe",
     thumbnail: "https://vignette2.wikia.nocookie.net/cartoonnetwork/images/8/88/Personaje_-_Steven_Universe_-_Vestimenta_05.png/revision/latest?cb=20150424004052&path-prefix=es",
     schedule: {
-      sunday:    [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      monday:    [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      tuesday:   [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      wednesday: [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      thursday:  [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      friday:    [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
-      saturday:  [moment("02:00", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")]
+      sunday:    [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      monday:    [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      tuesday:   [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      wednesday: [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      thursday:  [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      friday:    [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")],
+      saturday:  [moment("01:00", "HH:mm"), moment("01:15", "HH:mm"), moment("02:00", "HH:mm"), moment("02:15", "HH:mm"), moment("08:30", "HH:mm"), moment("14:15", "HH:mm")]
     }
   },
   {
@@ -170,13 +170,13 @@ CARTOON_SEEDS = [
     originalTitle: "Codename: Kids Next Door",
     thumbnail: "https://vignette.wikia.nocookie.net/smashbroslawlorigins/images/1/14/Number_4.gif/revision/latest?cb=20130215045442",
     schedule: {
-      sunday:    [moment("04:00", "HH:mm")],
-      monday:    [moment("04:00", "HH:mm")],
-      tuesday:   [moment("04:00", "HH:mm")],
-      wednesday: [moment("04:00", "HH:mm")],
-      thursday:  [moment("04:00", "HH:mm")],
-      friday:    [moment("04:00", "HH:mm")],
-      saturday:  [moment("04:00", "HH:mm")]
+      sunday:    [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      monday:    [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      tuesday:   [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      wednesday: [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      thursday:  [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      friday:    [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")],
+      saturday:  [moment("01:30", "HH:mm"), moment("01:45", "HH:mm"), moment("04:00", "HH:mm")]
     }
   },
   {
@@ -280,15 +280,15 @@ CARTOON_SEEDS = [
   {
     title: "As Meninas Superpoderosas",
     originalTitle: "The Powerpuff Girls",
-    thumbnail: "http://www.cartoon-clipart.co/amp/images/blossom2.png",
+    thumbnail: "http://4.bp.blogspot.com/-ocpii5M84MI/T9eNBKDIlCI/AAAAAAAAFlk/s86waTvC83E/s320/Meninas-Super-Poderosas-png-Queroimagem.com+%281%29.png",
     schedule: {
-      sunday:    [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      monday:    [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      tuesday:   [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      wednesday: [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      thursday:  [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      friday:    [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
-      saturday:  [moment("14:00", "HH:mm"), moment("17:00", "HH:mm")]
+      sunday:    [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      monday:    [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      tuesday:   [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      wednesday: [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      thursday:  [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      friday:    [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")],
+      saturday:  [moment("02:30", "HH:mm"), moment("02:45", "HH:mm"), moment("14:00", "HH:mm"), moment("17:00", "HH:mm")]
     }
   },
   {
@@ -352,13 +352,13 @@ CARTOON_SEEDS = [
     originalTitle: "Jorel's Brother",
     thumbnail: "https://i.pinimg.com/originals/b2/0f/a8/b20fa83e07927672bc039bdb0a12bbb5.png",
     schedule: {
-      sunday:    [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      monday:    [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      tuesday:   [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      wednesday: [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      thursday:  [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      friday:    [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
-      saturday:  [moment("11:00", "HH:mm"), moment("18:00", "HH:mm")]
+      sunday:    [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      monday:    [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      tuesday:   [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      wednesday: [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      thursday:  [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      friday:    [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")],
+      saturday:  [moment("11:15", "HH:mm"), moment("11:30", "HH:mm"), moment("11:45", "HH:mm"), moment("11:00", "HH:mm"), moment("18:00", "HH:mm")]
     }
   }
 ]
