@@ -296,13 +296,13 @@ CARTOON_SEEDS = [
     originalTitle: "Teen Titans Go!",
     thumbnail: "https://vignette.wikia.nocookie.net/teen-titans-go/images/5/5a/Robobobalobo.png/revision/latest?cb=20140413232109&path-prefix=pt-br",
     schedule: {
-      sunday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      monday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      tuesday:   [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      wednesday: [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      thursday:  [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      friday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
-      saturday:  [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")]
+      sunday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      monday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      tuesday:   [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      wednesday: [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      thursday:  [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      friday:    [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")],
+      saturday:  [moment("10:30", "HH:mm"), moment("12:00", "HH:mm"), moment("14:30", "HH:mm"), moment("14:45", "HH:mm"), moment("19:30", "HH:mm"), moment("21:30", "HH:mm")]
     }
   },
   {
