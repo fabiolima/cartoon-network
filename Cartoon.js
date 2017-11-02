@@ -1,6 +1,5 @@
 class Cartoon {
   constructor(params) {
-    console.log(params)
     this.title         = params.title         || "";
     this.originalTitle = params.originalTitle || "";
     this.thumbnail     = params.thumbnail     || "";
