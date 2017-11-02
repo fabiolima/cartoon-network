@@ -227,7 +227,6 @@ ul {
 }
 
 .schedule-details h2 {
-  padding: 20px 0;
   text-align: center;
   font-size: 3.5rem;
   font-family: CN;
@@ -244,16 +243,16 @@ ul {
 }
 
 .time {
-  width: 110px;
+  width: 100px;
   position: absolute;
   top: 29px;
-  left: -38px;
+  left: -33px;
   font-family: CN;
   transform: rotate(-90deg);
   color: var(--palette-grey);
   font-size: 2.1rem;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .thumbnail-wrapper {
