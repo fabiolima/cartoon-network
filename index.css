@@ -346,10 +346,12 @@ ul {
 
 .cartoon-name h2 {
   font-family: CN;
+  font-size: 1.2rem;
 }
 
 .cartoon-name h3 {
   font-family: Whitney;
+  font-size: 0.9rem;
 }
 
 .classification {
