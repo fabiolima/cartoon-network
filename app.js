@@ -60,7 +60,7 @@ var app = new Vue({
       return hour === this.getCurrentHour() ? 'black' : ['blue', 'pink', 'yellow'][hour % 3];
     },
 
-  	setSelected(hour) {
+    setSelected(hour) {
       this.selectedHour = hour;
     },
 
@@ -123,7 +123,7 @@ var app = new Vue({
         })
       })
 
-    	return _.orderBy(sorted, 'time.minutes');
+      return _.orderBy(sorted, 'time.minutes');
     },
 
     onCartoonHover: function(element) {
