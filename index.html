@@ -91,10 +91,10 @@
   <script type="text/x-template" id="cartoon-episode-modal">
     <transition name="modal">
       <div class="modal-mask">
-        <div class="modal-wrapper">
-          <div class="modal-container pink">
+        <div class="modal-wrapper" @click="$emit('close')">
+          <div class="modal-container pink" @click="$event.stopPropagation()">
             <div class="action-buttons">
-              <div class="close" @click="$emit('close')">X</div>
+              <div class="close blue" @click="$emit('close')">X</div>
             </div>
             <div class="modal-header yellow">
               <slot name="header">
@@ -144,10 +144,10 @@
   <script type="text/x-template" id="cartoon-schedule-modal">
     <transition name="modal">
       <div class="modal-mask">
-        <div class="modal-wrapper">
-          <div class="modal-container wide blue">
+        <div class="modal-wrapper" @click="$emit('close')">
+          <div class="modal-container wide blue" @click="$event.stopPropagation()">
             <div class="action-buttons">
-              <div class="close" @click="$emit('close')">X</div>
+              <div class="close pink" @click="$emit('close')">X</div>
             </div>
             <div class="modal-header yellow">
               <slot name="header">
