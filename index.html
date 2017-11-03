@@ -69,7 +69,7 @@
         <li @click="selectedCartoon = cartoon; showModal = 'cartoon';"
             v-for="cartoon in cartoons.slice(galleryStart, galleryEnd)">
           <img class="gallery-img"
-          		 v-bind:src="cartoon.thumbnail" />
+               v-bind:src="cartoon.thumbnail" />
         </li>
       </ul>
       <div class="arrow-container next" @click="nextCartoon()"></div>
