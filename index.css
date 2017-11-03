@@ -30,19 +30,19 @@
 
 /* Variables and Defaults */
 :root {
-  --palette-blue: #009ade;
-  --palette-pink: #ec0080;
-  --palette-yellow: rgb(255,234,0);
-  --palette-grey:   #4c4c4c;
-  --palette-black:  #000000;
-  --palette-white:  #ffffff;
-  --palette-black-rgba:  rgba(197, 197, 197, 1);
-  --palette-blue-rgba:   rgba(79,  201, 255, 1);
-  --palette-pink-rgba:   rgba(255, 128, 197, 1);
+  --palette-blue:       #009ade;
+  --palette-pink:       #ec0080;
+  --palette-yellow:     rgb(255,234,0);
+  --palette-grey:       #4c4c4c;
+  --palette-black:      #000000;
+  --palette-white:      #ffffff;
+  --palette-black-rgba: rgba(197, 197, 197, 1);
+  --palette-blue-rgba:  rgba(79,  201, 255, 1);
+  --palette-pink-rgba:  rgba(255, 128, 197, 1);
   --palette-yellow-rgba: rgba(253, 243, 153, 1);
 }
 
-html, body, section {
+html, body {
   max-height: 100%;
   height: 100vh;
 }
@@ -90,6 +90,8 @@ ul {
 /* SECTION INTRO */
 
 .intro {
+  height: 100vh;
+  max-height: 100%;
   display: flex;
 }
 
@@ -149,7 +151,6 @@ ul {
 .schedule {
   width: 1000px;
   margin: 0 auto;
-  padding: 60px 0;
 }
 
 .header {
@@ -239,7 +240,8 @@ ul {
   display: flex;
   margin: 10px;
   padding: 5px 5px 5px 5px;
-  background-color: var(--palette-white);
+  background: var(--palette-white);
+  transition: background 200ms ease;
 }
 
 .time {
@@ -264,6 +266,7 @@ ul {
 
 .thumbnail {
   height: 80px;
+  margin-left: 10px;
 }
 
 .cartoon-title {
@@ -274,6 +277,74 @@ ul {
   flex: 1;
   padding: 0 10px;
   width: 150px;
+}
+
+/* CARTOON GALLERY */
+
+.cartoon-gallery {
+  display: flex;
+  margin-bottom: 20px;
+  height: 120px;
+  background-color: var(--palette-pink);
+}
+
+.cartoon-gallery:after {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 15px;
+  background-color: var(--palette-blue);
+  border-bottom: 5px solid var(--palette-yellow);
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  height: 95px;
+  width: 150px;
+  background: var(--palette-white);
+  mask-image: url(assets/arrow.svg);
+  -webkit-mask-image: url(assets/arrow.svg);
+  -webkit-mask-position: left;
+  -webkit-mask-repeat: no-repeat;
+  transition: background 200ms ease-out;
+}
+
+.back {
+  transform: rotate(180deg)
+}
+
+.next {
+}
+
+.arrow-container:hover {
+  background: var(--palette-black);
+  cursor: pointer;
+}
+
+.cartoons-list {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.cartoons-list li {
+  margin-top: -12px;
+  z-index: 1;
+  height: 130px;
+}
+
+.gallery-img {
+  height: 100%;
+  transform: scale(1);
+  transition: transform 200ms ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* MODAL */
@@ -299,15 +370,17 @@ ul {
   width: 500px;
   margin: 0px auto;
   padding: 35px 0;
-  background-color: var(--palette-pink);
   border-radius: 15px;
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.modal-container.wide {
+  width: 628px;
+}
+
 .modal-header {
   height: 120px;
-  background-color: var(--palette-yellow);
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -323,7 +396,15 @@ ul {
   align-items: center;
   border-radius: 50%;
   padding: 3px;
+  /**/
+}
+
+.modal-thumbnail.blue {
   border: 8px solid var(--palette-blue);
+}
+
+.modal-thumbnail.pink {
+  border: 8px solid var(--palette-pink);
 }
 
 .modal-thumbnail img {
@@ -332,7 +413,6 @@ ul {
 
 .cartoon-name {
   z-index: 1;
-  background-color: var(--palette-blue);
   flex: 1;
   height: 80px;
   margin-left: -25px;
@@ -376,6 +456,37 @@ ul {
 
 .body-content {
   margin: 20px 20px;
+}
+
+.weekdays {
+  display: flex;
+}
+
+.weekday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 2px;
+  background-color: var(--palette-white);
+  font-size: 1.1rem;
+  color: var(--palette-pink);
+}
+
+.weekday span {
+  display: block;
+}
+
+.weekday span:nth-child(3) {
+  font-size: 1rem;
+  color: var(--palette-grey);
+}
+
+.weekday span:nth-child(1) {
+  font-size: 1.1rem;
+  color: var(--palette-pink);
 }
 
 .divisor {

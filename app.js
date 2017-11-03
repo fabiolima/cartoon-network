@@ -1,8 +1,22 @@
 moment.locale('pt-br');
 
-Vue.component('modal', {
-  template: '#modal-template',
+Vue.component('cartoon-episode-modal', {
+  template: '#cartoon-episode-modal',
   props: ['cartoon']
+});
+
+Vue.component('cartoon-schedule-modal', {
+  template: '#cartoon-schedule-modal',
+  props: ['cartoon'],
+  methods: {
+    getTime(moment) {
+      return moment.format("HH:mm");
+    },
+
+    getDayOfWeek(number) {
+      return moment().day(number).format("DD");
+    }
+  }  
 });
 
 var app = new Vue({
@@ -27,6 +41,8 @@ var app = new Vue({
     selectedHour: {},
     currentColor: "",
     showModal: false,
+    galleryStart: 0,
+    galleryEnd: 5
   },
 
   watch: {
@@ -67,6 +83,20 @@ var app = new Vue({
       });
 
       return this.sortScheduledCartoons(scheduledCartoons, dayOfWeek, hour);
+    },
+
+    nextCartoon: function() {
+      if (this.galleryEnd < this.cartoons.length) {
+        this.galleryStart ++;
+        this.galleryEnd ++;
+      }
+    },
+
+    previousCartoon: function() {
+      if (this.galleryStart > 0) {
+        this.galleryStart --;
+        this.galleryEnd --;
+      }
     },
 
     sortScheduledCartoons: function(cartoons, dayOfWeek, hour) {

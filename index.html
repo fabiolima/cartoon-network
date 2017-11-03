@@ -26,7 +26,7 @@
 
   <section id="app" class="schedule">
     <div class="header">
-      {{getDayOfWeek('pt-br')}}
+      {{ getDayOfWeek('pt-br') }}
     </div>
     <div class="container">
       <ul class="schedule-list">
@@ -44,12 +44,12 @@
       	<h2>{{scheduledCartoons[0].time.hour}}h</h2>
         <ul class="details-list">
           <li class="cartoon-item"
-              @click="showModal = true; selectedCartoon = cartoon;"
+              @click="showModal = 'episode'; selectedCartoon = cartoon;"
               @mouseenter="onCartoonHover"
               @mouseleave="onCartoonHover"
               v-for="cartoon in scheduledCartoons">
               <span class="time">
-                 {{ cartoon.time.hour }}:{{ cartoon.time.minutes}}
+                 {{ cartoon.time.hour }}:{{ cartoon.time.minutes }}
               </span>
               <figure class="thumbnail-wrapper">
                 <img class="thumbnail" v-bind:src="cartoon.cartoon.thumbnail" />
@@ -61,24 +61,49 @@
         </ul>
       </div>
     </div>
-    <modal v-if="showModal" v-bind="selectedCartoon" @close="showModal = false"></modal>
+
+    <div class="cartoon-gallery">
+      <div class="arrow-container back" @click="previousCartoon()"></div>
+      <ul class="cartoons-list">
+        <li @click="selectedCartoon = cartoon; showModal = 'cartoon';"
+            v-for="cartoon in cartoons.slice(galleryStart, galleryEnd)">
+          <img class="gallery-img"
+          		 v-bind:src="cartoon.thumbnail" />
+        </li>
+      </ul>
+      <div class="arrow-container next" @click="nextCartoon()"></div>
+    </div>
+
+    <cartoon-episode-modal 
+    	v-if="showModal == 'episode'"
+    	v-bind:cartoon="selectedCartoon"
+    	@close="showModal = null">
+  	</cartoon-episode-modal>
+
+    <cartoon-schedule-modal
+    	v-if="showModal == 'cartoon'"
+    	v-bind:cartoon="selectedCartoon"
+    	@close="showModal = null">
+  	</cartoon-schedule-modal>
   </section>
-  <script type="text/x-template" id="modal-template">
+
+  <!-- CARTOON EPISODE MODAL -->
+  <script type="text/x-template" id="cartoon-episode-modal">
     <transition name="modal">
       <div class="modal-mask">
         <div class="modal-wrapper">
-          <div class="modal-container">
+          <div class="modal-container pink">
             <div class="action-buttons">
               <div class="close" @click="$emit('close')">X</div>
             </div>
-            <div class="modal-header">
+            <div class="modal-header yellow">
               <slot name="header">
-                <figure class="modal-thumbnail">
-                  <img v-bind:src="cartoon.thumbnail" />
+                <figure class="modal-thumbnail blue">
+                  <img v-bind:src="cartoon.cartoon.thumbnail" />
                 </figure>
-                <div class="cartoon-name">
-                  <h2>{{cartoon.title}}</h2>
-                  <h3>{{cartoon.originalTitle}}</h3>
+                <div class="cartoon-name blue">
+                  <h2> {{ cartoon.cartoon.title 				}} </h2>
+                  <h3> {{ cartoon.cartoon.originalTitle }} </h3>
                 </div>
                 <div class="classification"> 10 </div>
               </slot>
@@ -114,11 +139,84 @@
       </div>
     </transition>
   </script>
+
+  <!-- CARTOON SCHEDULE MODAL -->
+  <script type="text/x-template" id="cartoon-schedule-modal">
+    <transition name="modal">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container wide blue">
+            <div class="action-buttons">
+              <div class="close" @click="$emit('close')">X</div>
+            </div>
+            <div class="modal-header yellow">
+              <slot name="header">
+                <figure class="modal-thumbnail pink">
+                  <img v-bind:src="cartoon.thumbnail" />
+                </figure>
+                <div class="cartoon-name pink">
+                  <h2> {{cartoon.title}} </h2>
+                  <h3> {{cartoon.originalTitle}} </h3>
+                </div>
+                <div class="classification"> 10 </div>
+              </slot>
+            </div>
+
+            <div class="modal-body">
+              <slot name="body">
+                <div class="body-content">
+                  <div class="weekdays">
+                  	<div class="weekday">
+                  		<span>Domingo</span>
+                  		<span> {{ getDayOfWeek(0) }} </span>
+                  		<span> {{getTime(cartoon.schedule.sunday[0]) }} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Segunda</span>
+                  		<span> {{ getDayOfWeek(1) }} </span>
+                  		<span> {{ getTime(cartoon.schedule.monday[0]) }} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Terça</span>
+                  		<span> {{ getDayOfWeek(2) }} </span>
+                  		<span> {{ getTime(cartoon.schedule.tuesday[0]) }} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Quarta</span>
+                  		<span> {{ getDayOfWeek(3) }} </span>
+                  		<span> {{ getTime(cartoon.schedule.wednesday[0]) }} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Quinta</span>
+                  		<span> {{ getDayOfWeek(4) }} </span>
+                  		<span> {{ getTime(cartoon.schedule.thursday[0])}} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Sexta</span>
+                  		<span> {{ getDayOfWeek(5) }} </span>
+                  		<span> {{getTime(cartoon.schedule.friday[0])}} </span>
+                  	</div>
+                  	<div class="weekday">
+                  		<span>Sábado</span>
+                  		<span> {{ getDayOfWeek(6) }} </span>
+                  		<span> {{ getTime(cartoon.schedule.saturday[0]) }} </span>
+                  	</div>
+                  </div>
+                </div>
+              </slot>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </transition>
+  </script>
+
   <script src="assets/libs/lodash.min.js"></script>
   <script src="assets/libs/vue.js"></script>
   <script src="assets/libs/moment-with-locales.js"></script>
   <script src="globals.js"></script>
   <script src="Cartoon.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
