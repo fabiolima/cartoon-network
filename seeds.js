@@ -322,7 +322,7 @@ CARTOON_SEEDS = [
   {
     title: "Dragon Ball Super",
     originalTitle: "Dragon Ball Super",
-    thumbnail: "http://www.dragonballsuperofficial.com/wp-content/uploads/2016/06/homepage-characters.png",
+    thumbnail: "https://vignette.wikia.nocookie.net/liberproeliis/images/d/d4/Shenlong_db_by_changopepe-d3e8ltb.png/revision/latest/scale-to-width-down/420?cb=20161031215201&path-prefix=pt-br",
     schedule: {
       sunday:    [moment("15:30", "HH:mm"), moment("23:00", "HH:mm")],
       monday:    [moment("15:30", "HH:mm"), moment("23:00", "HH:mm")],
