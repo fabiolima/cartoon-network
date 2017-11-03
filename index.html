@@ -42,7 +42,7 @@
       <div class="schedule-details"
            v-if="scheduledCartoons.length > 0"
            v-bind:class="currentColor">
-      	<h2>{{scheduledCartoons[0].time.hour}}h</h2>
+        <h2>{{scheduledCartoons[0].time.hour}}h</h2>
         <ul class="details-list">
           <li class="cartoon-item"
               @click="showModal = 'episode'; selectedCartoon = cartoon;"
@@ -76,15 +76,15 @@
     </div>
 
     <cartoon-episode-modal 
-    	v-if="showModal == 'episode'"
-    	v-bind:cartoon="selectedCartoon"
-    	@close="showModal = null">
+      v-if="showModal == 'episode'"
+      v-bind:cartoon="selectedCartoon"
+      @close="showModal = null">
     </cartoon-episode-modal>
 
     <cartoon-schedule-modal
-    	v-if="showModal == 'cartoon'"
-    	v-bind:cartoon="selectedCartoon"
-    	@close="showModal = null">
+      v-if="showModal == 'cartoon'"
+      v-bind:cartoon="selectedCartoon"
+      @close="showModal = null">
     </cartoon-schedule-modal>
   </section>
 
@@ -103,7 +103,7 @@
                   <img v-bind:src="cartoon.cartoon.thumbnail" />
                 </figure>
                 <div class="cartoon-name blue">
-                  <h2> {{ cartoon.cartoon.title 				}} </h2>
+                  <h2> {{ cartoon.cartoon.title         }} </h2>
                   <h3> {{ cartoon.cartoon.originalTitle }} </h3>
                 </div>
                 <div class="classification"> 10 </div>
@@ -167,41 +167,41 @@
               <slot name="body">
                 <div class="body-content">
                   <div class="weekdays">
-                  	<div class="weekday">
-                  		<span>Domingo</span>
-                  		<span> {{ getDayOfWeek(0) }} </span>
-                  		<span> {{getTime(cartoon.schedule.sunday[0]) }} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Segunda</span>
-                  		<span> {{ getDayOfWeek(1) }} </span>
-                  		<span> {{ getTime(cartoon.schedule.monday[0]) }} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Terça</span>
-                  		<span> {{ getDayOfWeek(2) }} </span>
-                  		<span> {{ getTime(cartoon.schedule.tuesday[0]) }} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Quarta</span>
-                  		<span> {{ getDayOfWeek(3) }} </span>
-                  		<span> {{ getTime(cartoon.schedule.wednesday[0]) }} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Quinta</span>
-                  		<span> {{ getDayOfWeek(4) }} </span>
-                  		<span> {{ getTime(cartoon.schedule.thursday[0])}} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Sexta</span>
-                  		<span> {{ getDayOfWeek(5) }} </span>
-                  		<span> {{getTime(cartoon.schedule.friday[0])}} </span>
-                  	</div>
-                  	<div class="weekday">
-                  		<span>Sábado</span>
-                  		<span> {{ getDayOfWeek(6) }} </span>
-                  		<span> {{ getTime(cartoon.schedule.saturday[0]) }} </span>
-                  	</div>
+                    <div class="weekday">
+                      <span>Domingo</span>
+                      <span> {{ getDayOfWeek(0) }} </span>
+                      <span> {{getTime(cartoon.schedule.sunday[0]) }} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Segunda</span>
+                      <span> {{ getDayOfWeek(1) }} </span>
+                      <span> {{ getTime(cartoon.schedule.monday[0]) }} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Terça</span>
+                      <span> {{ getDayOfWeek(2) }} </span>
+                      <span> {{ getTime(cartoon.schedule.tuesday[0]) }} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Quarta</span>
+                      <span> {{ getDayOfWeek(3) }} </span>
+                      <span> {{ getTime(cartoon.schedule.wednesday[0]) }} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Quinta</span>
+                      <span> {{ getDayOfWeek(4) }} </span>
+                      <span> {{ getTime(cartoon.schedule.thursday[0])}} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Sexta</span>
+                      <span> {{ getDayOfWeek(5) }} </span>
+                      <span> {{getTime(cartoon.schedule.friday[0])}} </span>
+                    </div>
+                    <div class="weekday">
+                      <span>Sábado</span>
+                      <span> {{ getDayOfWeek(6) }} </span>
+                      <span> {{ getTime(cartoon.schedule.saturday[0]) }} </span>
+                    </div>
                   </div>
                 </div>
               </slot>
