@@ -372,7 +372,6 @@ ul {
   padding: 35px 0 15px 0;
   border-radius: 15px;
   transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-container.wide {
@@ -396,7 +395,6 @@ ul {
   align-items: center;
   border-radius: 50%;
   padding: 3px;
-  /**/
 }
 
 .modal-thumbnail.blue {
@@ -508,13 +506,14 @@ ul {
 }
 
 .close {
+  font-family: Whitney;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--palette-white);
   display: flex;
   justify-content: center;
   height: 20px;
   width: 20px;
-  color: var(--palette-white);
-  font-size: 1.2rem;
-  font-weight: bold;
   overflow: hidden;
   cursor: pointer;
 }
@@ -522,12 +521,6 @@ ul {
 .modal-default-button {
   float: right;
 }
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- */
 
 .modal-enter {
   opacity: 0;
