@@ -369,7 +369,7 @@ ul {
 .modal-container {
   width: 500px;
   margin: 0px auto;
-  padding: 35px 0;
+  padding: 35px 0 15px 0;
   border-radius: 15px;
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
@@ -512,7 +512,6 @@ ul {
   justify-content: center;
   height: 20px;
   width: 20px;
-  background-color: var(--palette-blue);
   color: var(--palette-white);
   font-size: 1.2rem;
   font-weight: bold;
