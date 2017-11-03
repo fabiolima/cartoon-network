@@ -343,7 +343,7 @@ ul {
 }
 
 .back:active {
-  transform: rotate(180deg) scale(0.9);
+  transform: rotate(180deg) scale(0.91);
 }
 
 .next:active {
