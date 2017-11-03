@@ -27,9 +27,10 @@ var app = new Vue({
       this.cartoons.push(new Cartoon(cartoon));
     });
 
-    this.scheduleHours = SCHEDULE_HOURS;
+    this.currentDay        = moment().format('DD');
+    this.currentColor      = this.getCurrentColor(this.getCurrentHour());
+    this.scheduleHours     = SCHEDULE_HOURS;
     this.scheduledCartoons = this.getSchedule(this.getDayOfWeek(), this.getCurrentHour());
-    this.currentColor = this.getCurrentColor(this.getCurrentHour());
   },
 
   data: {
@@ -37,9 +38,10 @@ var app = new Vue({
     selectedCartoon: {},
     scheduledCartoons: [],
     scheduleHours: [],
+    currentDay: '',
     currentHour: function() { return this.getCurrentHour(); },
     selectedHour: {},
-    currentColor: "",
+    currentColor: '',
     showModal: false,
     galleryStart: 0,
     galleryEnd: 5
@@ -74,7 +76,11 @@ var app = new Vue({
 
     getDayOfWeek(locale = 'en') {
       moment.locale(locale);
-      return moment().format('dddd').toLowerCase();
+      return moment(this.currentDay, 'DD').format('dddd').toLowerCase();
+    },
+
+    nextDay() {
+      this.currentDay = moment(this.currentDay, 'DD').add(1, 'days').format('DD');
     },
 
     getSchedule: function(dayOfWeek, hour) {

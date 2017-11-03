@@ -194,6 +194,27 @@ ul {
   font-family: Riffic;
 }
 
+.next-day {
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  background: var(--palette-grey);
+  mask-image: url(assets/arrow.svg);
+  -webkit-mask-image: url(assets/arrow.svg);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  transition: background 200ms ease-out;
+  cursor: pointer;
+}
+
+.next-day:active {
+  transform: scale(0.9);
+}
+
+.next-day:hover {
+  background: var(--palette-black);
+}
+
 .hour.active {
   opacity: 1;
 }
@@ -312,16 +333,21 @@ ul {
   transition: background 200ms ease-out;
 }
 
+.arrow-container:hover {
+  background: var(--palette-black);
+  cursor: pointer;
+}
+
 .back {
   transform: rotate(180deg)
 }
 
-.next {
+.back:active {
+  transform: rotate(180deg) scale(0.9);
 }
 
-.arrow-container:hover {
-  background: var(--palette-black);
-  cursor: pointer;
+.next:active {
+  transform: scale(0.9);
 }
 
 .cartoons-list {

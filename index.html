@@ -26,7 +26,7 @@
 
   <section id="app" class="schedule">
     <div class="header">
-      {{ getDayOfWeek('pt-br') }}
+      {{ getDayOfWeek('pt-br') }}, {{ currentDay }}
     </div>
     <div class="container">
       <ul class="schedule-list">
@@ -37,6 +37,7 @@
 
           {{hour.moment.hour() }}h
         </li>
+        <li class="next-day" @click="nextDay()"></li>
       </ul>
       <div class="schedule-details"
            v-if="scheduledCartoons.length > 0"
