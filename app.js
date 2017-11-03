@@ -16,7 +16,7 @@ Vue.component('cartoon-schedule-modal', {
     getDayOfWeek(number) {
       return moment().day(number).format("DD");
     }
-  }  
+  }
 });
 
 var app = new Vue({
@@ -39,7 +39,6 @@ var app = new Vue({
     scheduledCartoons: [],
     scheduleHours: [],
     currentDay: '',
-    currentHour: function() { return this.getCurrentHour(); },
     selectedHour: {},
     currentColor: '',
     showModal: false,
